@@ -1,8 +1,32 @@
 .card {
 	height: 140px;
 	width: 100px;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 5px;
 	margin: 15px;
 	float: left;
+}
+
+.card.down {
+	background: repeating-linear-gradient(
+		60deg,
+		transparent,
+		transparent 10px,
+		white 10px,
+		white 12px
+	), repeating-linear-gradient(
+		-60deg,
+		transparent,
+		transparent 10px,
+		white 10px,
+		white 12px
+	), red;
+}
+
+.card .face.red {
+	color: red;
+}
+
+.card.down .face {
+	display: none;
 }

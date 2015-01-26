@@ -1,8 +1,12 @@
+var template = '<div class="card down"><span class="face red"><span class="rank">K</span><span class="suit">♦</span></span></div>';
+
 function Card(){
-	var template = '<div class="card down"></div>';
 	this.el = $(template)
+	this.el.click(this.flip.bind(this))
 }
 
-Card.prototype.render = function(){
-	
+Card.prototype.flip = function(){
+	this.el.toggleClass('down')
 }
+
+var suits = ['♠︎','♣︎','♥︎','♦︎']
