@@ -12,15 +12,18 @@ App.playerHasWon = function(){
 }
 
 App.newGame = function(){
-	var cards = App.cards = []
+	var cards = []
 	var c, rank, suit
 	for (rank = 0; rank<13; rank++){
 		for (suit = 0; suit<4; suit++){
 			c = new App.Card(rank, suit)
-			App.el.append(c.el)
 			cards.push(c)
 		}
 	}
+	App.cards = cards.shuffled()
+	App.cards.forEach(function(card){
+		App.el.append(card.el);
+	})
 	App.el.on('click', '.card', mainHandler)
 }
 
