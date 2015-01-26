@@ -1,9 +1,13 @@
+* {
+	box-sizing: border-box;
+}
 .card {
 	height: 140px;
 	width: 100px;
 	border: 2px solid black;
 	border-radius: 5px;
 	margin: 15px;
+	padding: 5px;
 	float: left;
 }
 
@@ -23,10 +27,10 @@
 	), red;
 }
 
-.card .face.red {
+.card .front.red {
 	color: red;
 }
 
-.card.down .face {
+.card.down .front {
 	display: none;
 }
