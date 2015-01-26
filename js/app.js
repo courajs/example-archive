@@ -94,7 +94,15 @@ function successfulMatch(){
 }
 
 function victory(){
-	alert("Congratulations, you did it! You concentrated hard, and you figured it out. I'm so proud of you.")
+	alert("Congratulations, you did it! You concentrated hard, and you figured it out. I'm so proud of you! Refresh for a new game, or just bask and click around for a while.")
+	unfreeze()
+	App.el.off('click', '.card', mainHandler)
+	App.el.on('click', '.card', endgameHandler)
+}
+
+function endgameHandler(){
+	var card = App.cards[$(this).index()]
+	card.flip()
 }
 
 })()
