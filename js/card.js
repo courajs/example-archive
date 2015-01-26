@@ -8,7 +8,6 @@ function Card(rank, suit){
 	this.rank = rank;
 	this.suit = suit;
 	this.render();
-	this.el.click(this.flip.bind(this))
 }
 
 Card.prototype.render = function(){
@@ -23,6 +22,11 @@ Card.prototype.render = function(){
 
 Card.prototype.flip = function(){
 	this.el.toggleClass('down')
+}
+
+Card.prototype.clear = function(){
+	this.cleared = true;
+	this.el.addClass('cleared')
 }
 
 window.App.Card = Card;

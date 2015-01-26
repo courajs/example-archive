@@ -15,9 +15,12 @@ for (rank = 0; rank<13; rank++){
 
 $root.on('click', '.card', function(){
 	var card = cards[$(this).index()]
+	if (card.cleared) return;
+	
+	card.flip()
 	setTimeout(function(){
-		card.flip()
-	}, 500)
+		card.clear()
+	}, 750)
 })
 
 })()

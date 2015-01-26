@@ -27,6 +27,10 @@
 	), red;
 }
 
+.card.cleared {
+	visibility: hidden;
+}
+
 .card .front.red {
 	color: red;
 }
