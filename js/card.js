@@ -13,7 +13,6 @@ function Card(rank, suit){
 
 Card.prototype.render = function(){
 	this.el = $(template)
-	this.el.attr('id', '')
 	this.el.find('.rank').text(ranks[this.rank])
 	this.el.find('.suit').text(suits[this.suit])
 	if (this.suit == 1 || this.suit == 3) {		// hearts & diamonds are red
