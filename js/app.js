@@ -14,8 +14,8 @@ App.playerHasWon = function(){
 App.newGame = function(){
 	var cards = []
 	var c, rank, suit
-	for (rank = 0; rank<13; rank++){
-		for (suit = 0; suit<4; suit++){
+	for (rank = 0; rank<App.Card.ranks.length; rank++){
+		for (suit = 0; suit<App.Card.suits.length; suit++){
 			c = new App.Card(rank, suit)
 			cards.push(c)
 		}

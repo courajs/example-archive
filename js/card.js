@@ -11,6 +11,9 @@ function Card(rank, suit){
 	this.render()
 }
 
+Card.ranks = ranks;
+Card.suits = suits;
+
 Card.prototype.render = function(){
 	this.el = $(template)
 	this.el.find('.rank').text(ranks[this.rank])
