@@ -88,7 +88,7 @@ function failedMatch(card1, card2){
 
 function successfulMatch(){
 	if (App.playerHasWon()){
-		victory()
+		setTimeout(victory, 0) // allows flip to finish before alert pops up in Safari. Otherwise, final card is still face-down until user hits OK
 	}
 	else {
 		unfreeze()
