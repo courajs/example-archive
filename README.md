@@ -1,4 +1,4 @@
 # Concentration
-Find the matches
+Match up the cards
 
 ![How to play](https://raw.githubusercontent.com/courajs/concentration/img/concentration.gif)
